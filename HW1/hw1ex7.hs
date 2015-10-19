@@ -46,7 +46,7 @@ qsort6 (x:xs) = qsort6 larger ++ [x] ++ qsort6 smaller
   where smaller = [a | a <- xs, a < x]
         larger = [b | b <- xs, b > x]
 ans6 = qsort6 [1,3,4,5,2]
--- Y (?????)
+-- N
 
 qsort7 [] = []
 qsort7 (x:xs) = reverse (reverse (qsort7 smaller) ++ [x] ++ reverse (qsort7 larger))
